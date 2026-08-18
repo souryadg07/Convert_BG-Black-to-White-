@@ -42,6 +42,8 @@ try:
 except ImportError:
     sys.exit("NumPy not found. Run:  pip install numpy")
 
+from moveConverted import move_converted_files
+
 # A band whose average luminance (0-1) is below this is treated as "dark"
 DARK_THRESHOLD = 0.35
 
@@ -209,6 +211,8 @@ def convert_pdf(input_path: str, output_path: str,
     dst.close()
     src.close()
     print(f"\nDone → {output_path}")
+    move_converted_files()
+    print(f"converted files moved to converted dir")
 
 def normalize_page_to_white(pil_img: Image.Image) -> Image.Image:
     """

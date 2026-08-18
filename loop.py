@@ -1,9 +1,7 @@
 import os
 import subprocess
 from multiprocessing import Pool
-import sys
 
-import cv2
 def process_single_pdf(file_info):
     script_dir, file = file_info
     full_path = os.path.join(script_dir, file)
