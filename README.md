@@ -27,7 +27,7 @@ python convert_pdf.py input.pdf output.pdf [--dpi 150] [--bands 40] [--slides 4]
 - `--bands`: number of horizontal analysis bands used to detect dark regions (default 40)
 - `--slides`: number of slides per output page, arranged in an auto-sized grid (default 4)
 
-Convert every PDF in the current directory in parallel (writes `<name>_converted.pdf` next to each source file):
+Convert every PDF in the current directory in parallel (writes `<name>_converted.pdf` inside converted dir):
 
 ```
 python loop.py
